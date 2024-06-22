@@ -1,0 +1,100 @@
+@font-face {
+    font-family: Gotham HTF;
+    src: url('./assets/fonts/Gotham-font-family-full/Gotham-font-family/Gotham/Gotham-Bold.otf') format('opentype'),
+         url('./fonts/Gotham-Book.woff2') format('woff2'),
+         url('./fonts/Gotham-Book.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Gotham;
+    src: url('./assets/fonts/Gotham-font-family-full/Gotham-font-family/Gotham/Gotham-Medium.otf') format('opentype'),
+         url('./fonts/Gotham-Book.woff2') format('woff2'),
+         url('./fonts/Gotham-Book.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    color: white;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 0;
+    background-color: #333;
+}
+
+.logo {
+    height: 30px;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-top: 550px;
+}
+
+.overlay-text h1 {
+    position:relative;
+    z-index: 2;
+    font-size: 4rem;
+    margin: 0;
+    font-family: Gotham;
+}
+
+.background-text span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15rem;
+    color: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+    font-family: Gotham HTF;
+}
+
+p{
+    margin-top: 100px;
+}
+
+.inscreva-se {
+    padding: 0.5rem 2rem;
+    color: #ED145B;
+    font-family: GothamHTF-Book;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 16px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid #ED145B;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.inscreva-se:hover {
+    color: #FFFFFF;
+    background-color: #ED145B;
+    border: 5px solid solid #ED145B;
+}
+
