@@ -1,29 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FIAP</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="fiap.css">
+    <link rel="stylesheet" href="/assets/fonts/gotham.css">
 </head>
-
 <body>
-    <nav>
-        <img src="/assets/svgs/logo-fiap.svg" alt="FIAP Logo" class="logo">
-    </nav>
+    <script src="fiap.js"></script>
 
     <header>
-        <div class="container">
-            <div class="overlay-text">
-                <h1>A Melhor Faculdade </h1>
-                <h1 class="baixo">de Tecnologia</h1>
+        <nav id="navbar" class="navbar">
+            <img src="/assets/svgs/logo-fiap.svg" alt="Logo Fiap">
+            <div class="prog-barra">
+                <div class="filled"></div>
             </div>
-            <div class="background-text">
-                <span>SOBRE</span>
-            </div>
-        </div>
+        </nav>
+        <section class="about">
+            <h1 class="about-animation">SOBRE</h1>
+            <div class="top-college-text">
+                <h2 class="main-text">A Melhor Faculdade</h2>
+                <h2>de Tecnologia</h2>
+            </div>     
+        </section>
     </header>
+    
+    <section class="introduction">
+        <div class="endless-animation">
+            <div class="infinite-text-1">
+                <h3 class="courses-description">CURSOS E IMERSÕES. UMA NOVA CULTURA DE MERCADO.</h3>
+            </div>
+            <h3 class="tech-description">TECNOLOGIA, INOVAÇÃO E NEGÓCIOS. PRESENTE E FUTURO.</h3>
+        </div>
+        
+        <img src="/assets/imgs/intro.png" alt="aluno" class="intro-image">
+        <div class="knowledge-animation">
+            <h3 class="skills-label">SKILLS • CONHECIMENTO</h3>
+            <h3 class="tutoring-label">MUITO. MUITO ALÉM DOS TUTORIAIS</h3>
+        </div>
+    </section>
+    
+    <section class="water-section">
+        <img width="100%" src="assets/imgs/water/water_191.jpg" alt="water animation">
+    </section>
+
+    <section class="courses">
+        <div class="courses-left">
+            <h2 class="courses-title">Cursos</h2>
+            <h3 class="short-courses-label">Cursos de Curta Duração</h3>
+            <h2 class="technology-label">Tecnologia</h2>
+            <ul class="courses-list">
+                <li class="course-item">
+                    <h4>Big Data Ecosystem</h4>
+                    <p>remoto • live</p>
+                </li>
+                <li class="course-item">
+                    <h4>Creating Dashboards for BI</h4>
+                    <p>remoto • live</p>
+                </li>
+                <li class="course-item">
+                    <h4>Big Data Science - Machine Learning & Data Mining</h4>
+                    <p>remoto • live + multimídia</p>
+                </li>
+                <li class="course-item">
+                    <h4>Storytelling</h4>
+                    <p>remoto • live</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="faq-section">
+        <h2 class="faq-title">FAQ</h2>
+        <h3 class="common-questions">Dúvidas Frequentes</h3>
+
+        <ul class="faq-list">
+            <li class="faq-item">
+                <h2>QUANDO POSSO ME MATRICULAR?</h2>
+                <p>Você pode se matricular em qualquer dia e hora, basta acessar a página do curso e se inscrever.</p>
+            </li>
+            <li class="faq-item">
+                <h2>POSSO FAZER DOIS OU MAIS CURSOS AO MESMO TEMPO?</h2>
+                <p>Sim. Apenas atente-se às datas, elas devem ser diferentes, porque cada curso tem sua dinâmica.</p>
+            </li>
+            <li class="faq-item">
+                <h2>QUAIS OS PRÉ-REQUISITOS?</h2>
+                <p>Cada curso tem seus pré-requisitos descritos na própria página. Identifique-os, para que você obtenha um melhor aproveitamento do seu SHIFT.</p>
+            </li>
+            <li class="faq-item">
+                <h2>QUAL A DURAÇÃO DOS CURSOS?</h2>
+                <p>De 6 a 42 horas.</p>
+            </li>
+            <li class="faq-item">
+                <h2>PRECISO LEVAR ALGUM MATERIAL PARA AS AULAS?</h2>
+                <p>Não. Os materiais utilizados em sala de aula são fornecidos pela FIAP e as aulas mais técnicas são realizadas em nossos próprios laboratórios. Sugerimos somente que traga o que preferir para suas anotações.</p>
+            </li>
+            <li class="faq-item">
+                <h2>VOU RECEBER CERTIFICADO DE CONCLUSÃO DE CURSO?</h2>
+                <p>Sim. Ao cumprir pelo menos 75% da carga horária do curso, você receberá um Certificado Digital, que poderá ser acessado na plataforma.</p>
+            </li>
+        </ul>
+    </footer>
 </body>
 </html>

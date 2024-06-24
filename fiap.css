@@ -1,100 +1,120 @@
-@font-face {
-    font-family: Gotham HTF;
-    src: url('./assets/fonts/Gotham-font-family-full/Gotham-font-family/Gotham/Gotham-Bold.otf') format('opentype'),
-         url('./fonts/Gotham-Book.woff2') format('woff2'),
-         url('./fonts/Gotham-Book.woff') format('woff');
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: Gotham;
-    src: url('./assets/fonts/Gotham-font-family-full/Gotham-font-family/Gotham/Gotham-Medium.otf') format('opentype'),
-         url('./fonts/Gotham-Book.woff2') format('woff2'),
-         url('./fonts/Gotham-Book.woff') format('woff');
-    font-weight: 800;
-    font-style: normal;
+:root {
+    --light-gray: #202121;
+    --dark-gray: #0B0C0D;
+    --dark-blue: #454C4F;
+    --fiap-pink: #F80D5A;
 }
 
 body {
+    max-width: 1920px;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #000;
-    color: white;
+    font-family: "Gotham HTF";
+    color: #FFFF;
+    background-color: #000000;
 }
 
 nav {
-    position: absolute;
-    top: 0;
+    position: fixed;
     width: 100%;
+    height: 80px;
+    margin: auto auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 18px 0;
-    background-color: #333;
+    z-index: 10;
+    transition: all 0.5s;
 }
 
-.logo {
-    height: 30px;
+.nav-bg {
+    transition: all 0.5s;
+    background-color: var(--light-gray);
 }
 
-.container {
-    position: relative;
-    text-align: center;
-    text-align: center;
-    color: white;
-    position: relative;
-    margin-top: 550px;
+nav img {
+    width: 144px;
+    height: 39px;
 }
 
-.overlay-text h1 {
-    position:relative;
-    z-index: 2;
-    font-size: 4rem;
-    margin: 0;
-    font-family: Gotham;
-}
-
-.background-text span {
+.prog-barra {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 15rem;
-    color: rgba(255, 255, 255, 0.1);
-    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    height: 1vh;
+}
+
+.filled {
+    --progress: 0;
+    height: 100%;
+    width: var(--progress);
+    background-color: var(--fiap-pink);
+}
+
+.about {
     font-family: Gotham HTF;
+    height: 1100px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "area";
 }
 
-p{
-    margin-top: 100px;
+.about h1 {
+    font-weight: 800;
+    color: var(--dark-gray);
+    font-size: 250px;
+    grid-area: area;
+    align-self: center;
+    justify-self: center;
+    animation: fadeInAbout 1s linear;
 }
 
-.inscreva-se {
-    padding: 0.5rem 2rem;
-    color: #ED145B;
-    font-family: GothamHTF-Book;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 16px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    vertical-align: middle;
-    cursor: pointer;
-    user-select: none;
-    background-color: transparent;
-    border: 1px solid #ED145B;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+@keyframes fadeInAbout {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
-.inscreva-se:hover {
-    color: #FFFFFF;
-    background-color: #ED145B;
-    border: 5px solid solid #ED145B;
+.about h2 {
+    font-weight: 400;
+    font-size: 75px;
+    margin: 0;
+    position: relative;
+    bottom: 73px;
+    right: 57px;
+    animation: best-animation 1s ease;
 }
 
+.about .main-text {
+    position: relative;
+    bottom: 59px;
+    right: -6px;
+}
+
+.about .top-college-text {
+    grid-area: area;
+    align-self: center;
+    justify-self: center;
+    letter-spacing: -2px;
+}
+
+@keyframes best-animation {
+    0% { opacity: 0; transform: translate(0px, -10px); }
+    100% { opacity: 1; transform: translate(0px, 0px); }
+}
+
+.introduction {
+    height: 1230px;
+}
+
+.knowledge-animation {
+    display: none;
+}
+
+.introduction img {
+    width: 1495px;
+    display: flex;
+    justify-content: center;
+}
