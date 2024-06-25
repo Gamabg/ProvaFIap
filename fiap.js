@@ -15,3 +15,33 @@ function updateProgressBar() {
     document.querySelector('.filled').style.setProperty('--progress', scrollPercent);
 }
 document.addEventListener('scroll', updateProgressBar);
+
+document.addEventListener('DOMContentLoaded', () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo('.h1', 
+        { x: 1500, opacity: 1 }, 
+        { x: -1500, 
+          scrollTrigger: {
+              trigger: '.title',
+              start: 'top 80%',
+              end: 'bottom 10%',
+              scrub: true,
+              markers: true
+          }
+        }
+    );
+
+    gsap.fromTo('.h2', 
+        { x: -1500, opacity: 1 }, 
+        { x: 1500, 
+          scrollTrigger: {
+              trigger: '.title',
+              start: 'top 80%',
+              end: 'bottom 10%',
+              scrub: true,
+              markers: true
+          }
+        }
+    );
+});

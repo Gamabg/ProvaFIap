@@ -28,14 +28,17 @@
     </header>
     
     <section class="introduction">
-        <div class="endless-animation">
-            <div class="infinite-text-1">
-                <h3 class="courses-description">CURSOS E IMERSÕES. UMA NOVA CULTURA DE MERCADO.</h3>
+        <div class="container">
+            <div class="title">
+                <h1 class="h1">CURSOS E IMERSÕES. UMA NOVA CULTURA DE MERCADO.</h1>
+                <h2 class="hdois">TECNOLOGIA, INOVAÇÃO E NEGÓCIOS. PRESENTE E FUTURO.</h2>
             </div>
-            <h3 class="tech-description">TECNOLOGIA, INOVAÇÃO E NEGÓCIOS. PRESENTE E FUTURO.</h3>
+            <img class="img" src="/assets/imgs/intro.png" alt="">
         </div>
-        
-        <img src="/assets/imgs/intro.png" alt="aluno" class="intro-image">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+        <script src="fiap.js"></script>
+
         <div class="knowledge-animation">
             <h3 class="skills-label">SKILLS • CONHECIMENTO</h3>
             <h3 class="tutoring-label">MUITO. MUITO ALÉM DOS TUTORIAIS</h3>
@@ -46,62 +49,90 @@
         <img width="100%" src="assets/imgs/water/water_191.jpg" alt="water animation">
     </section>
 
-    <section class="courses">
-        <div class="courses-left">
-            <h2 class="courses-title">Cursos</h2>
-            <h3 class="short-courses-label">Cursos de Curta Duração</h3>
-            <h2 class="technology-label">Tecnologia</h2>
-            <ul class="courses-list">
-                <li class="course-item">
-                    <h4>Big Data Ecosystem</h4>
-                    <p>remoto • live</p>
+    <div class="app">
+        <section class="intro">
+            <div class="title">
+                <h1>Cursos</h1>
+                <h2>Cursos de Curta Duração</h2>
+            </div>
+            <ul class="items">
+                <li>Tecnologia</li>
+                <li>Inovação</li>
+                <li>Negócio</li>
+            </ul>
+        </section>
+        <main>
+            <h3>Tecnologia</h3>
+            <ul class="courseList">
+                <li class="courseItem">
+                    <span class="courseName">Big Data Ecosystem</span>
+                    <span class="courseType">REMOTO • LIVE</span>
                 </li>
-                <li class="course-item">
-                    <h4>Creating Dashboards for BI</h4>
-                    <p>remoto • live</p>
+                <li class="courseItem">
+                    <span class="courseName">Creating Dashboards for BI</span>
+                    <span class="courseType">REMOTO • LIVE</span>
                 </li>
-                <li class="course-item">
-                    <h4>Big Data Science - Machine Learning & Data Mining</h4>
-                    <p>remoto • live + multimídia</p>
+                <li class="courseItem">
+                    <span class="courseName">Big Data Science - Machine Learning & Data Mining</span>
+                    <span class="courseType">REMOTO • LIVE + MULTIMIDIA</span>
                 </li>
-                <li class="course-item">
-                    <h4>Storytelling</h4>
-                    <p>remoto • live</p>
+                <li class="courseItem">
+                    <span class="courseName">Storytelling</span>
+                    <span class="courseType">REMOTO • LIVE</span>
                 </li>
             </ul>
-        </div>
-    </section>
+        </main>
+    </div>
 
     <footer class="faq-section">
-        <h2 class="faq-title">FAQ</h2>
-        <h3 class="common-questions">Dúvidas Frequentes</h3>
-
-        <ul class="faq-list">
-            <li class="faq-item">
-                <h2>QUANDO POSSO ME MATRICULAR?</h2>
-                <p>Você pode se matricular em qualquer dia e hora, basta acessar a página do curso e se inscrever.</p>
-            </li>
-            <li class="faq-item">
-                <h2>POSSO FAZER DOIS OU MAIS CURSOS AO MESMO TEMPO?</h2>
-                <p>Sim. Apenas atente-se às datas, elas devem ser diferentes, porque cada curso tem sua dinâmica.</p>
-            </li>
-            <li class="faq-item">
-                <h2>QUAIS OS PRÉ-REQUISITOS?</h2>
-                <p>Cada curso tem seus pré-requisitos descritos na própria página. Identifique-os, para que você obtenha um melhor aproveitamento do seu SHIFT.</p>
-            </li>
-            <li class="faq-item">
-                <h2>QUAL A DURAÇÃO DOS CURSOS?</h2>
-                <p>De 6 a 42 horas.</p>
-            </li>
-            <li class="faq-item">
-                <h2>PRECISO LEVAR ALGUM MATERIAL PARA AS AULAS?</h2>
-                <p>Não. Os materiais utilizados em sala de aula são fornecidos pela FIAP e as aulas mais técnicas são realizadas em nossos próprios laboratórios. Sugerimos somente que traga o que preferir para suas anotações.</p>
-            </li>
-            <li class="faq-item">
-                <h2>VOU RECEBER CERTIFICADO DE CONCLUSÃO DE CURSO?</h2>
-                <p>Sim. Ao cumprir pelo menos 75% da carga horária do curso, você receberá um Certificado Digital, que poderá ser acessado na plataforma.</p>
-            </li>
-        </ul>
+        <div class="container2">
+            <h1>FAQ</h1>
+            <h2>Dúvidas Frequentes</h2>
+            <div class="box">
+                <div class="item">
+                    <hr />
+                    <h3>QUANDO POSSO ME MATRICULAR</h3>
+                    <p>
+                        Você pode se matricular em qualquer dia e hora, basta acessar a página do curso e se inscrever.
+                    </p>
+                </div>
+                <div class="item">
+                    <hr />
+                    <h3>POSSO FAZER DOIS OU MAIS CURSOS AO MESMO TEMPO?</h3>
+                    <p>
+                        Sim. Apenas atente-se às datas, elas devem ser diferentes, porque cada curso tem sua dinâmica.
+                    </p>
+                </div>
+                <div class="item">
+                    <hr />
+                    <h3>QUAIS OS PRÉ-REQUISITOS?</h3>
+                    <p>
+                        Cada curso tem seus pré-requisitos descritos na própria página. Identifique-os, para que você obtenha um melhor aproveitamento do seu SHIFT.
+                    </p>
+                </div>
+                <div class="item">
+                    <hr />
+                    <h3>QUAL A DURAÇÃO DOS CURSOS?</h3>
+                    <p>
+                        De 6 a 42 horas.
+                    </p>
+                </div>
+                <div class="item">
+                    <hr />
+                    <h3>PRECISO LEVAR ALGUM MATERIAL PARA AS AULAS?</h3>
+                    <p>
+                        Não. Os materiais utilizados em sala de aula são fornecidos pela FIAP e as aulas mais técnicas são realizadas em nossos próprios laboratórios. Sugerimos somente que traga o que preferir para suas anotações.
+                    </p>
+                </div>
+                <div class="item">
+                    <hr />
+                    <h3>VOU RECEBER CERTIFICADO DE CONCLUSÃO DE CURSO?</h3>
+                    <p>
+                        Sim. Ao cumprir pelo menos 75% da carga horária do curso, você receberá um Certificado Digital, que poderá ser acessado na plataforma.
+                    </p>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

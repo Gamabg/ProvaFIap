@@ -10,15 +10,15 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Gotham HTF";
-    color: #FFFF;
-    background-color: #000000;
+    color: #FFF;
+    background-color: #000;
 }
 
 nav {
     position: fixed;
     width: 100%;
     height: 80px;
-    margin: auto auto;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,8 +27,8 @@ nav {
 }
 
 .nav-bg {
-    transition: all 0.5s;
     background-color: var(--light-gray);
+    transition: all 0.5s;
 }
 
 nav img {
@@ -114,7 +114,222 @@ nav img {
 }
 
 .introduction img {
-    width: 1495px;
+    width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.container {
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    padding: 100px 0; 
+}
+
+.title {
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    padding: 100px 0;
+}
+
+.h1,
+.hdois {
+    font-family: Gotham HTF;
+    position: relative;
+    will-change: transform;
+    opacity: 0; 
+    font-size: 68px;
+    border-bottom: 2px solid white;
+}
+
+.app {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.title h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.items {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.items li {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.courseList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.courseItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.courseName {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.courseType {
+    font-size: 16px;
+    color: #555;
+}
+
+.container2 {
+    width: 80%;
+    margin: 150px auto 0;
+}
+
+.container h1 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.container h2 {
+    font-size: 1.3rem;
+    font-weight: 100;
+    color: #F80D5A;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.box .item {
+    width: 30%;
+    min-height: 150px;
+    margin-bottom: 15px;
+}
+
+.item hr {
+    margin-bottom: 15px;
+    width: 50px;
+    transition: width 0.3s ease, background-color  0.3s ease;
+}
+
+.item p {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.item:hover p {
+    opacity: 1;
+    cursor: default;
+}
+
+.item:hover hr {
+    width: 100%;
+    background-color: #ED145B;
+    cursor: default;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .about h1 {
+        font-size: 200px;
+    }
+
+    .about h2 {
+        font-size: 50px;
+    }
+
+    .h1,
+    .hdois {
+        font-size: 50px;
+    }
+
+    .items {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container2 {
+        width: 90%;
+    }
+
+    .box .item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav img {
+        width: 120px;
+        height: 30px;
+    }
+
+    .about h1 {
+        font-size: 150px;
+    }
+
+    .about h2 {
+        font-size: 40px;
+    }
+
+    .h1,
+    .hdois {
+        font-size: 40px;
+    }
+
+    .box .item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav img {
+        width: 100px;
+        height: 25px;
+    }
+
+    .about h1 {
+        font-size: 100px;
+    }
+
+    .about h2 {
+        font-size: 30px;
+    }
+
+    .h1,
+    .hdois {
+        font-size: 30px;
+    }
+
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .container h2 {
+        font-size: 1rem;
+    }
 }
