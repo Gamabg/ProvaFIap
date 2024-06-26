@@ -1,3 +1,4 @@
+//Navbar Animada barra vermelha Progredindo//
 function handleScroll() {
     var navbar = document.querySelector('.navbar');
     var scroll = window.scrollY;
@@ -9,7 +10,7 @@ function handleScroll() {
 }
 window.addEventListener('scroll', handleScroll);
 
-//Barra Vermelha na Navbar//
+//Texto animado para os lados//
 function updateProgressBar() {
     const { scrollTop, scrollHeight } = document.documentElement;
     const scrollPercent = scrollTop / (scrollHeight - window.innerHeight) * 100 + '%';
@@ -50,17 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-//animação da agua//
+//Animação da agua//
 document.addEventListener('scroll', function () {
     const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
     const scrollFraction = scrollTop / (scrollHeight - clientHeight);
     const frameIndex = Math.min(
-        190, // Max frame index (191 images, 0-indexed)
+        190, 
         Math.floor(scrollFraction * 191)
     );
 
     const imgElement = document.getElementById('waterImage');
-    imgElement.src = `assets/imgs/water/water_${String(frameIndex + 50).padStart(3, '0')}.jpg`;
+    imgElement.src = `assets/imgs/water/water_${String(frameIndex + 20).padStart(3, '0')}.jpg`;
 });
 
 

@@ -1,10 +1,3 @@
-:root {
-    --light-gray: #202121;
-    --dark-gray: #0B0C0D;
-    --dark-blue: #454C4F;
-    --fiap-pink: #F80D5A;
-}
-
 body {
     max-width: 1920px;
     margin: 0;
@@ -14,6 +7,8 @@ body {
     background-color: #000;
 }
 
+
+/*Navbar com progessão de barra vermelha*/
 nav {
     position: fixed;
     width: 100%;
@@ -27,7 +22,7 @@ nav {
 }
 
 .nav-bg {
-    background-color: var(--light-gray);
+    background-color: #202121;
     transition: all 0.5s;
 }
 
@@ -47,9 +42,11 @@ nav img {
     --progress: 0;
     height: 100%;
     width: var(--progress);
-    background-color: var(--fiap-pink);
+    background-color: #F80D5A;
 }
 
+
+/*Sobre com efeitos especiais*/
 .about {
     font-family: Gotham HTF;
     height: 1100px;
@@ -64,7 +61,7 @@ nav img {
 
 .about h1 {
     font-weight: 800;
-    color: var(--dark-gray);
+    color: #0B0C0D;
     font-size: 250px;
     grid-area: area;
     align-self: center;
@@ -106,7 +103,7 @@ nav img {
 }
 
 
-/*Texto indo pra um lado e para o outro*/
+/*Texto animado para os lados*/
 .container {
     text-align: center;
     overflow: hidden;
@@ -117,7 +114,7 @@ nav img {
 .title {
     text-align: center;
     position: relative;
-    padding: 40px 0; /* Reduzindo o padding para diminuir o espaço entre os títulos */
+    padding: 40px 0;
 }
 
 .h1,
@@ -139,7 +136,7 @@ nav img {
 }
 
 
-/*aniamação da agua*/
+/*Aniamação da agua*/
 .water-section {
     position: relative;
     width: 100%;
@@ -161,60 +158,56 @@ nav img {
     object-fit: cover;
 }
 
-
-
-/*cursos*/
+/* Cursos */
 .app {
     max-width: 900px;
-    margin: 0 auto;
+    margin: auto;
     padding: 20px;
 }
 
 .intro {
     display: flex;
     justify-content: space-between;
-    align-items: baseline; /* Alinha os elementos ao topo */
+    align-items: baseline;
     margin-bottom: 20px;
 }
 
 .title {
     display: flex;
+    align-items: center;
     flex-direction: row;
-    align-items: center; /* Alinha itens verticalmente ao centro */
 }
 
 .text-container {
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: left;
 }
 
 .text-container h1 {
     font-size: 36px;
-    margin: 0; /* Remove todas as margens */
+    margin: 0;
 }
 
 .text-container h2 {
     font-size: 14px;
-    margin: 0; /* Remove todas as margens */
+    margin: 0;
     color: #F80D5A;
 }
 
 .items {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end; /* Alinha os itens à direita */
-    align-items: center; /* Alinha itens verticalmente ao centro */
-    list-style-type: none;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
     padding: 0;
     margin: 0;
-    
 }
 
 .items .item {
     font-size: 14px;
     font-weight: bold;
-    margin-left: 20px; /* Espaçamento entre os itens da lista */
-    position: relative; /* Permite posicionar o hr em relação ao item */
-    cursor: pointer; /* Mostra o cursor como pointer ao passar por cima */
+    margin-left: 20px;
+    position: relative;
+    cursor: pointer;
 }
 
 .items .item::before {
@@ -222,81 +215,70 @@ nav img {
     position: absolute;
     top: -5px;
     left: 0;
-    width: 0%;
+    width: 0;
     height: 4px;
     background-color: #F80D5A;
-    transition: width 0.3s ease; 
+    transition: width 0.3s ease;
 }
 
 .items .item.active::before {
     width: 50%;
 }
 
-    .courseList {
-        list-style-type: none;
-        padding: 0;
-        width: 60%;
-    }
+.courseList {
+    list-style: none;
+    padding: 0;
+    width: 60%;
+}
 
-    .courseItem {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
-        padding: 10px;
-        border-bottom: 1px solid #ccc;
-        margin-left: 0;
-        position: relative; /* Para posicionar os pseudo-elementos */
-    }
+.courseItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
 
-    .courseItem::before,
-    .courseItem::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: transparent;
-        z-index: -1; /* Para ficar atrás do conteúdo */
-        transition: background-color 0.3s ease; /* Transição suave */
-    }
+.courseItem::before,
+.courseItem::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: -1;
+    transition: background-color 0.3s ease;
+}
 
-    .courseItem::before {
-        left: 0;
-        background-color: transparent;
-    }
+.courseItem::before {
+    left: 0;
+}
 
-    .courseItem::after {
-        right: 0;
-        background-color: transparent;
-    }
+.courseItem::after {
+    right: 0;
+}
 
-    .courseItem:hover::before,
-    .courseItem:hover::after {
-        background-color: #F80D5A; /* Cor de fundo vermelha ao passar o mouse */
-    }
+.courseItem:hover::before,
+.courseItem:hover::after {
+    background-color: #F80D5A;
+}
 
-    .courseName {
-        font-size: 16px;
-        font-weight: bold;
-        color: #555;
-    }
-    .courseType {
-        font-size: 16px;
-        font-weight: bold;
-        color: #555;
-    }
+.courseName {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+}
 
-    .courseType {
-        margin-left: 0;
-        font-size: 12px;
-        color: #555;
-    }
+.courseType {
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+    margin-left: 0;
+}
 
-
-
-
-
-/*FAQ*/
+/* FAQ */
 .container2 {
     width: 80%;
     margin: 120px auto 0;
@@ -309,7 +291,6 @@ nav img {
 
 .box {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 100px;
@@ -318,18 +299,21 @@ nav img {
 .box .item {
     width: 30%;
     min-height: 150px;
-    margin-bottom: 10px;
     margin-left: 10px;
+    margin-bottom: 10px;
+    position: relative;
 }
 
 .item hr {
     position: absolute;
-    margin-bottom: 15px;
+    top: 0;
     width: 50px;
-    transition: width 0.3s ease, background-color  0.3s ease;
-    background-color: #F80D5A;
+    background-color: #FFF;
+    transition: width 0.3s ease, background-color 0.3s ease;
 }
+
 .item p {
+    margin-top: 20px;
     opacity: 0;
     transition: opacity 1s ease;
 }
@@ -344,7 +328,6 @@ nav img {
     background-color: #F80D5A;
     cursor: default;
 }
-
 
 
 
